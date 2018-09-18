@@ -95,6 +95,12 @@
 		return $retorno;
 	}
 
+	public function Editar(){
+		$sql = "UPDATE $this->tabela SET titulo ='$this->titulo',num_pag=$this->num_pag,descricao='$this->descricao', arquivo='$this->arquivo',id_cat=$this->id_cat";
+		$retorno = mysqli_query($this->conexao, $sql);
+		return $retorno;
+	}
+
 	}
 
 ?>

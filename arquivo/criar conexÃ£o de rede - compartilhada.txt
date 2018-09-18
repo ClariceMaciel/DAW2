@@ -1,0 +1,21 @@
+netsh wlan set hostednetwork mode=allow ssid=nomedarede key=senha
+
+netsh wlan start hostednetwork
+
+
+
+
+central de rede e compartilhamento
+alterar as configurações do adaptador 
+enthernet - propriedades - compartilhamento - permitir a conexão a rede
+
+
+desativar ponto de acesso
+netsh wlan stop hosted network
+enthernet - propriedades - compartilhamento - permitir a conexão a rede - desmarcar
+
+
+
+não funcionar rede de acesso
+win+r
+compmgmt.msc - gerenciador de dispositivos - ativar rede com seta pra baixo

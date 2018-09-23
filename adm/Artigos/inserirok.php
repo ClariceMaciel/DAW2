@@ -7,6 +7,7 @@
 	$objArtigo->num_pag = $_POST["num_pag"];
 	$objArtigo->descricao = $_POST["descricao"];
 	$objArtigo->id_cat = $_POST["id_cat"];
+	$objArtigo->id_user = $_POST["id_cat"];
 	//$objArtigo->id_user = $_POST["id_user"]; //pegar o id ADM pelo Login
 
 	if($_FILES["arquivo"]){
@@ -14,12 +15,21 @@
 		$nome = $_FILES["arquivo"]["name"];
 		$nomeTemporario = $_FILES["arquivo"]["tmp_name"];
 		move_uploaded_file($nomeTemporario, $diretorio.$nome);
+	}
+
+	if($_FILES["imagem"]){
+		$diretorio = "../../arquivo/img/";
+		$nomeImg = $_FILES["imagem"]["name"];
+		$nomeTemporarioImg = $_FILES["imagem"]["tmp_name"];
+		move_uploaded_file($nomeTemporarioImg, $diretorio.$nomeImg);
 
 	}
 
 	$objArtigo->arquivo = $nome;
+	$objArtigo->imagem = $nomeImg;
 
 	$retorno = $objArtigo->InserirArquivo();
+
 	if($retorno)
 		echo "Não sei como, mas funcionou";
 	else

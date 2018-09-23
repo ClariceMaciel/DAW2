@@ -6,7 +6,7 @@
 		private $num_pag;
 		private $descricao;
 		private $arquivo;
-		//private $imagem;
+		private $imagem;
 		private $id_user;
 		private $id_cat;
 
@@ -32,8 +32,8 @@
 		}
 
 		public function InserirArquivo(){
-			$sql = "INSERT INTO $this->tabela(titulo, data_pub, num_pag, descricao, arquivo, id_user, id_cat)
-			values('$this->titulo',$this->data_pub, $this->num_pag, '$this->descricao', '$this->arquivo',$this->id_user,$this->id_cat)";
+			$sql = "INSERT INTO $this->tabela(titulo, data_pub, num_pag, descricao, arquivo,imagem, id_user, id_cat)
+			values('$this->titulo','$this->data_pub', $this->num_pag, '$this->descricao', '$this->arquivo','$this->imagem',$this->id_user,$this->id_cat)";
 			$retorno = mysqli_query($this->conexao, $sql);
 			return $retorno;
 		}
@@ -52,7 +52,7 @@
 				$obj->num_pag = $res["num_pag"];
 				$obj->descricao = $res["descricao"];
 				$obj->arquivo = $res["arquivo"];
-				//$obj->imagem = $res["imagem"];
+				$obj->imagem = $res["imagem"];
 				$obj->id_user = $res["id_user"];
 				$obj->id_cat = $res["id_cat"];
 
@@ -75,7 +75,7 @@
 			$objeto->num_pag = $resultado['num_pag'];
 			$objeto->descricao = $resultado['descricao'];
 			$objeto->arquivo = $resultado['arquivo'];
-			//$objeto->imagem = $resultado['imagem'];
+			$objeto->imagem = $resultado['imagem'];
 			$obj->id_user = $res['id_user'];
 			$objeto->id_cat = $resultado['id_cat'];
 
@@ -96,7 +96,21 @@
 	}
 
 	public function Editar(){
-		$sql = "UPDATE $this->tabela SET titulo ='$this->titulo',num_pag=$this->num_pag,descricao='$this->descricao', arquivo='$this->arquivo',id_cat=$this->id_cat";
+		$sql = "UPDATE $this->tabela SET titulo ='$this->titulo',num_pag=$this->num_pag,descricao='$this->descricao',id_cat=$this->id_cat WHERE id = $this->id";
+		$retorno = mysqli_query($this->conexao, $sql);
+		return $retorno;
+	}
+
+
+	public function EditarImagem(){
+		$sql = "UPDATE $this->tabela SET imagem='$this->imagem' WHERE id=$this->id";
+		$retorno = mysqli_query($this->conexao, $sql);
+		return $retorno;
+	}
+
+
+	public function EditarArquivo(){
+		$sql = "UPDATE $this->tabela SET arquivo='$this->arquivo' WHERE id=$this->id";
 		$retorno = mysqli_query($this->conexao, $sql);
 		return $retorno;
 	}

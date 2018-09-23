@@ -21,9 +21,8 @@
                 Titulo: <input type="text" name="titulo" value="<?php echo $unico->titulo;?>"/></br>
                 Número de Páginas: <input type="number" name="num_pag" value="<?php echo $unico->num_pag;?>"/></br>
                 Descrição: <input type="text" name="descricao" value="<?php echo $unico->descricao;?>"/></br>
-                Arquivo: <input typr="file" name="arquivo" value="<?php echo $unico->arquivo;?>"/></br>
                 Categoria: <select name="id_cat">
-                           <option value="">Select</option>
+                           <option value=""></option>
 
                            <?php
                                 foreach($resultado as $dados){

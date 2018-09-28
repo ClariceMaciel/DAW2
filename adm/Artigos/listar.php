@@ -31,8 +31,8 @@
 										<td>$local->data_pub</td>
 										<td>$local->num_pag</td>
 										<td>$local->descricao</td>
-										<td><img src='../../arquivo/$local->arquivo'width='150'/></td>
-										<td><img src='../../arquivo/img/$local->imagem'width='150'/></td>
+										<td><img src='../../artigo/arquivo/$local->arquivo'width='150'/></td>
+										<td><img src='../../artigo/img/$local->imagem'width='150'/></td>
 										<td>$local->id_user</td>
 										<td>$local->id_cat</td>
 										<td><a href='editar.php?id=$local->id'>Editar</a></td>

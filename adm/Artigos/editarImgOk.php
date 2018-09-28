@@ -6,7 +6,7 @@
 
 
 	if($_FILES["imagem"]){
-		$diretorio = "../../arquivo/img/";
+		$diretorio = "../../artigo/img/";
 		$nomeImg = $_FILES["imagem"]["name"];
 		$nomeTemporarioImg = $_FILES["imagem"]["tmp_name"];
 		move_uploaded_file($nomeTemporarioImg, $diretorio.$nomeImg);

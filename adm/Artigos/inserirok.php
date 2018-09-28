@@ -11,14 +11,14 @@
 	//$objArtigo->id_user = $_POST["id_user"]; //pegar o id ADM pelo Login
 
 	if($_FILES["arquivo"]){
-		$diretorio = "../../arquivo/";
+		$diretorio = "../../artigo/arquivo";
 		$nome = $_FILES["arquivo"]["name"];
 		$nomeTemporario = $_FILES["arquivo"]["tmp_name"];
 		move_uploaded_file($nomeTemporario, $diretorio.$nome);
 	}
 
 	if($_FILES["imagem"]){
-		$diretorio = "../../arquivo/img/";
+		$diretorio = "../../artigo/img/";
 		$nomeImg = $_FILES["imagem"]["name"];
 		$nomeTemporarioImg = $_FILES["imagem"]["tmp_name"];
 		move_uploaded_file($nomeTemporarioImg, $diretorio.$nomeImg);

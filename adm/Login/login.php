@@ -22,9 +22,9 @@
 		      <form class="form-login" action="loginok.php" method="POST">
 		        <h2 class="form-login-heading">Admin Login</h2>
 		        <div class="login-wrap">
-		            <input type="text" class="form-control" placeholder="User Email" name="email" autofocus>
+		            <input type="text" class="form-control" placeholder="User Email" name="email" autofocus required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
 		            <br>
-		            <input type="password" class="form-control" placeholder="Password" name="senha"><br><br>
+		            <input type="password" class="form-control" placeholder="Password" name="senha" required><br><br>
 		            <button class="btn btn-theme btn-block" type="submit">Submit</button>
 		            <button class="btn btn-theme btn-block" type="reset">Reset</button>
 		            <hr>

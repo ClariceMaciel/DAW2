@@ -7,7 +7,7 @@
 	$objArtigo->num_pag = $_POST["num_pag"];
 	$objArtigo->descricao = $_POST["descricao"];
 	$objArtigo->id_cat = $_POST["id_cat"];
-	$objArtigo->id_user = $_POST["id_cat"];
+	$objArtigo->id_user = $_SESSION["id_user"];
 	//$objArtigo->id_user = $_POST["id_user"]; //pegar o id ADM pelo Login
 
 	if($_FILES["arquivo"]){

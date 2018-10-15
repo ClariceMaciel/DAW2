@@ -1,5 +1,10 @@
 <?php
 	include_once("../../sql/Carregar.class.php");
+	include_once("../../theme/ample-admin-lite/html/topo.php");
+
+	if(!isset($_SESSION['adm'])){
+			header("Location:../Login/login.php");
+	}
 
 	$objCategoria = new Categoria();
 	$resultado = $objCategoria->ListarCategoria();
@@ -42,3 +47,7 @@
 		</form>
 	</body>
 </html>
+
+		<?php
+					include_once("../../theme/ample-admin-lite/html/rodape.php");
+		 ?>

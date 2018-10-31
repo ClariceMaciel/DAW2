@@ -76,7 +76,7 @@
 			$objeto->descricao = $resultado['descricao'];
 			$objeto->arquivo = $resultado['arquivo'];
 			$objeto->imagem = $resultado['imagem'];
-			$obj->id_user = $resultado['id_user'];
+			$objeto->id_user = $resultado['id_user'];
 			$objeto->id_cat = $resultado['id_cat'];
 
 			$ArquivoRetornado = $objeto;

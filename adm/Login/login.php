@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../theme/ample-admin-lite/plugins/images/favicon.png">
 
     <title>Admin Login</title>
     <link href="../../theme/ample-admin-lite/html/bootstrap/dist/css/bootstrap.css" rel="stylesheet">

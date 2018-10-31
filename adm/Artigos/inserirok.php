@@ -11,7 +11,7 @@
 	//$objArtigo->id_user = $_POST["id_user"]; //pegar o id ADM pelo Login
 
 	if($_FILES["arquivo"]){
-		$diretorio = "../../artigo/arquivo";
+		$diretorio = "../../artigo/arquivo/";
 		$nome = $_FILES["arquivo"]["name"];
 		$nomeTemporario = $_FILES["arquivo"]["tmp_name"];
 		move_uploaded_file($nomeTemporario, $diretorio.$nome);
